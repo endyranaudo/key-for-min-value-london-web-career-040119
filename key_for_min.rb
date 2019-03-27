@@ -7,6 +7,9 @@ def key_for_min_value(hash)
   lowest_key = nil
   lowest_value = nil 
   hash.each do |k, v|
-    binding.pry
+    if v < lowest_key
+      lowest_key = k
+      lowest_value = v
   end
+  lowest_key
 end 
